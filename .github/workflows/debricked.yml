@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: debricked/actions/cache@v3
+      - uses: CarlTern/actions/callgraph-non-docker@264dc9072054fa7b3e60ea5e18d708a0a55a6250
       - uses: debricked/actions/scan-non-docker@v3
         env:
           DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
